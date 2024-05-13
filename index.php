@@ -39,7 +39,7 @@
 
 ?>
 
-
+   <script src="./js/scrip.js"></script>
 </body>
 
 </html>
