@@ -54,7 +54,7 @@
         $resultado = $x*9;
         echo "9 x $x = $resultado <br>";
     }
-*/
+
 
     // Exercício 01
     $a = 10;
@@ -160,23 +160,15 @@
     } else{
         echo "$nome é menor que 18 e tem $idade anos";
     }
+    */
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:blue;">Formulário</h1>
+        <form action="receber_post.php" method="POST">
+            <input style="border: 2px solid blue; border-radius: 12px" type="text" name="campoNome" placeholder="Digite seu nome">
+            <input style="border: 2px solid blue; border-radius: 12px" type="text" name="campoIdade" placeholder="Digite sua idade">
+            <button  style="border-radius: 20px; border: 2px solid orange; background-color: blue; color: white;" type="submit">Enviar</button>
+        </form>
 
 
 
