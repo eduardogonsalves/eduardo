@@ -170,7 +170,208 @@
             <button  style="border-radius: 20px; border: 2px solid orange; background-color: blue; color: white;" type="submit">Enviar</button>
         </form>
 
+        <hr style="border: 2px solid orange;">
+        <!--
+        // Exercício 01
+            $a = 10;
+            $b = 15;
+            $soma = $a + $b;
+            echo "Resultado 1: " . $soma*$a;
+            echo "<br>";-->
 
+
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 01</h2>
+          <h2>Cálculo da soma de dois números.</h2>
+        <form method="GET">
+            <label>Valor A</label>
+            <input type="text" name="nA">
+            <label>Valor B</label>
+            <input type="text" name="nB">
+            <button type="submit">Calcular</button>
+            <p>
+                <?php
+                    if(isset($_GET['nA'])){
+                        $valorA = $_GET['nA'];
+                        $valorB = $_GET['nB'];
+                        $soma = $valorA + $valorB;
+                        echo "Resultado = $soma";
+                    }
+                ?>
+            </p>
+        </form>
+
+
+        <!--        // Exercício 02
+            $n1 = 7;
+            $n2 = 5;
+            $n3 = 6;
+            $media = ($n1 + $n2 + $n3) / 3;
+            echo "Resultado 2: " . $media;
+            echo "<br>";-->
+
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 02</h2>
+
+        <h2>Deseja calcular sua média e saber se foi aprovado?</h2>
+        <p>Digite suas notas nos campos abaixo.</p>
+
+        <form method="POST">
+            <label>Nota 01:</label>
+            <input type="text" name="nota1">
+            <label>Nota 02:</label>
+            <input type="text" name="nota2">
+            <label>Nota 03:</label>
+            <input type="text" name="nota3">
+            <button type="submit">Calcular</button>
+            <p>
+                <?php
+                if(isset($_POST['nota1'])){
+                    $n1 = $_POST['nota1'];
+                    $n2 = $_POST['nota2'];
+                    $n3 = $_POST['nota3'];
+                    $media = ($n1 + $n2 + $n3) / 3;
+                    if($media >= 7){
+                        echo "Média = $media.Bom trabalho, o senhor foi aprovado!";
+                    } else if($media >5){
+                        echo "Precisa se esforçar mais, está em recuperação!";
+                    } else {
+                        echo "Infelizmente não foi desta vez, o senhor foi reprovado!";
+                    }
+                }
+                ?>
+            </p>
+        </form>
+
+        <!--
+        // Exercício 03
+        $x = 100;
+        $y = ($x / 100)* 15;
+        echo "Resultado 3: " . $y;
+        echo "<br>";-->
+
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 03</h2>
+
+        <h2>Cálculo de 15% de um valor fornecido.</h2>
+        <form method="get">
+            <label>Valor inicial</label><br>
+            <input type="text" name="numero" placeholder="digite um valor">
+            <button type="submit">Calcular</button>
+            <p>
+                <?php
+                    if(isset($_GET['numero'])){
+                        $numero = $_GET['numero'];
+                        $percentual = $numero * 0.15;
+                        echo "Resultado = $percentual";
+                    }
+                ?>
+            </p>
+        </form>
+        
+        <!--
+        // Exercício 04
+        $x = 100;
+        $y = ($x / 100)* 5;
+        $z = ($x / 100)* 50;
+        echo "Resultado 4: Para $x, o resultado é " . $y . " e " . $z . " respectivamente.";
+        echo "<br>"; -->
+
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 04</h2>
+
+        <h2>Calculando 5% e 50% de um valor fornecido.</h2>
+        <form method="POST">
+            <label>Valor inicial</label><br>
+            <input type="text" name="valor5" placeholder="digite um valor">
+            <button type="submit">Calcular 5% </button><br>
+            <p>
+                <?php
+                    if(isset($_POST['valor5'])){
+                        $valor5 = $_POST['valor5'];
+                        $perc5 = $valor5 * 0.05;
+                        echo "Resultado = $perc5";
+                    }
+                ?>
+            </p>
+        </form>
+        <form method="Post">
+            <label>Valor inicial</label><br>
+            <input type="text" name="valor50" placeholder="digite um valor">
+            <button type="submit">Calcular 50%</button>            
+            <p>
+                <?php
+                    if(isset($_POST['valor50'])){
+                        $valor50 = $_POST['valor50'];
+                        $perc50 = $valor50 * 0.5;
+                        echo "Resultado = $perc50";
+                    }
+                ?>
+            </p>
+        </form>
+        <!--
+        // Exercício 05
+        $x = 15;
+        if($x < 0){
+            echo "Resultado 5: Para valor digitado(15) - Valor Negativo";
+        } else if($x = 0){
+            echo "Resultado 5: Para valor digitado(15) - Igual a zero";
+        } else {
+            echo "Resultado 5: Para valor digitado(15) - Valor Positivo";
+        }
+        echo "<br>";-->
+
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 05</h2>
+
+        <h2>Identificação de número Positivo ou Negativo.</h2>
+        <form method="GET">
+            <label>Valor:</label>
+            <input type="text" name="sinal" placeholder="digite um número">
+            <button type="submit">Calcular</button>
+            <p>
+                <?php
+                    if(isset($_GET['sinal'])){
+                        $sinal = $_GET['sinal'];
+                        if($sinal < 0){
+                            echo "Negativo";
+                        } else if($sinal == 0){
+                            echo "Número igual a Zero";
+                        } else{
+                            echo "Positivo";
+                        }
+                    }
+                ?>
+            </p>
+        </form>
+        <!--
+        // Exercício 06
+        echo "Resultado 6:";
+        echo "<br>";
+        for($x = 1; $x <= 10; $x++){
+            $resultado = $x*4;
+            echo "4 x $x = $resultado <br>";
+        }
+        echo "<br>";-->
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 06</h2>
+
+        <h1 id="tabuada">Deseja aprender a tabuada de que número?</h1>
+        <form method="GET">
+            <label>Tabuada desejada:</label>
+            <input type="text" name="tabuada">
+            <a href="#tabuada"><button type="submit">Mostrar</button></a>
+            <p>
+                <?php
+                    if(isset($_GET['tabuada'])){
+                        $valor = $_GET['tabuada'];
+                        for($i = 1; $i <=10; $i++){
+                            $resultado = $i*$valor;
+                            echo "$valor x $i = $resultado <br>";
+                        }
+                    }
+                ?>
+            </p>
+        </form>
 
 
    <script src="./js/scrip.js"></script>

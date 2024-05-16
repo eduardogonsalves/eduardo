@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    color: rgb(73, 72, 72);
+    display: flex;
+    justify-content: center;
+    background: url('./imagens/login1.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Poppins, sans-serif;
+}
+
+.btn{
+    width: 120px;
+    background-color: rgba(77, 167, 240, 0.662);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 6px;
+}
+
+.btn:hover{
+    color: rgb(123, 123, 201);
+    background-color: rgb(198, 128, 128);
+}
+
+input::placeholder{
+text-align: center;
+}
+
+
+.acesso {
+    display: inline-block;
+    text-align: center;
+    padding: 80px;
+    margin-top: 200px;
+    backdrop-filter: blur(15px);
+    width: 400px;
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgb(133, 133, 133);
+}
