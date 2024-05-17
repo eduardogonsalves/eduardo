@@ -121,20 +121,7 @@
     echo "<br>";
 
 
-    // Exercício 08
-    echo "Resultado 8: para a=9 e b=6";
-    echo "<br>";
-    $a = 6;
-    $b = 6;
-    if($a > $b){
-        echo $b . " " . $a;
-    } else if ($a = $b){
-        echo "Iguais";
-    }
-    else{
-        echo $a . " " . $b;
-    }
-    echo "<br>";
+
 
 
     // Exercício 09
@@ -171,14 +158,6 @@
         </form>
 
         <hr style="border: 2px solid orange;">
-        <!--
-        // Exercício 01
-            $a = 10;
-            $b = 15;
-            $soma = $a + $b;
-            echo "Resultado 1: " . $soma*$a;
-            echo "<br>";-->
-
 
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 01</h2>
           <h2>Cálculo da soma de dois números.</h2>
@@ -199,15 +178,6 @@
                 ?>
             </p>
         </form>
-
-
-        <!--        // Exercício 02
-            $n1 = 7;
-            $n2 = 5;
-            $n3 = 6;
-            $media = ($n1 + $n2 + $n3) / 3;
-            echo "Resultado 2: " . $media;
-            echo "<br>";-->
 
         <hr style="border: 2px solid orange;">
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 02</h2>
@@ -242,13 +212,6 @@
             </p>
         </form>
 
-        <!--
-        // Exercício 03
-        $x = 100;
-        $y = ($x / 100)* 15;
-        echo "Resultado 3: " . $y;
-        echo "<br>";-->
-
         <hr style="border: 2px solid orange;">
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 03</h2>
 
@@ -267,14 +230,6 @@
                 ?>
             </p>
         </form>
-        
-        <!--
-        // Exercício 04
-        $x = 100;
-        $y = ($x / 100)* 5;
-        $z = ($x / 100)* 50;
-        echo "Resultado 4: Para $x, o resultado é " . $y . " e " . $z . " respectivamente.";
-        echo "<br>"; -->
 
         <hr style="border: 2px solid orange;">
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 04</h2>
@@ -308,17 +263,6 @@
                 ?>
             </p>
         </form>
-        <!--
-        // Exercício 05
-        $x = 15;
-        if($x < 0){
-            echo "Resultado 5: Para valor digitado(15) - Valor Negativo";
-        } else if($x = 0){
-            echo "Resultado 5: Para valor digitado(15) - Igual a zero";
-        } else {
-            echo "Resultado 5: Para valor digitado(15) - Valor Positivo";
-        }
-        echo "<br>";-->
 
         <hr style="border: 2px solid orange;">
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 05</h2>
@@ -343,15 +287,7 @@
                 ?>
             </p>
         </form>
-        <!--
-        // Exercício 06
-        echo "Resultado 6:";
-        echo "<br>";
-        for($x = 1; $x <= 10; $x++){
-            $resultado = $x*4;
-            echo "4 x $x = $resultado <br>";
-        }
-        echo "<br>";-->
+
         <hr style="border: 2px solid orange;">
         <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 06</h2>
 
@@ -373,6 +309,58 @@
             </p>
         </form>
 
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 07</h2>
+
+        <h2>Descubra se um número é Par ou Impar?</h2>
+        <form method="POST">
+            <Label>Número</Label>
+            <input type="text" name="parEimpar">
+            <button type="submit">Mostrar</button>
+            <p>
+                <?php
+                    if(isset($_POST['parEimpar'])){
+                        $parEimpar = $_POST['parEimpar'];
+                        if($parEimpar % 2 > 0){
+                            echo "$parEimpar é Impar";
+                        } else{
+                            echo "$parEimpar é Par";
+                        }
+                    }               
+                ?>
+            </p>
+        </form>
+        <!--
+        // Exercício 08
+        echo "Resultado 8: para a=9 e b=6";
+        echo "<br>";
+        $a = 6;
+        $b = 6;
+        if($a > $b){
+            echo $b . " " . $a;
+        } else if ($a = $b){
+            echo "Iguais";
+        }
+        else{
+            echo $a . " " . $b;
+        }
+        echo "<br>";-->
+        <hr style="border: 2px solid orange;">
+        <h2 style="background-color: orangered; color: greenyellow; text-align: center">Exercício 08</h2>
+        <h2>Comparação de dois números inteiros(Postos em ordem crescente)</h2>
+        <form method="GET">
+            <label>Valor A</label>
+            <input type="text" name="vA">
+            <label>Valor B</label>
+            <input type="text" name="vB">
+            <button type="submit">Ordenar</button>
+            <p>
+                <?php
+                    if(isset())
+
+                ?>
+            </p>
+        </form>
 
    <script src="./js/scrip.js"></script>
 </body>

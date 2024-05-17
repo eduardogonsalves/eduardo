@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    color: rgb(73, 72, 72);
+    display: flex;
+    justify-content: center;
+    background-image: url('./imagens/formulario.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Poppins, sans-serif;
+}
+
+.cadastro{
+    margin-top: 100px;
+    text-align: center;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+}
+
+
+label{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 4px;
+    margin-bottom: 7px;
+    margin-top: 5px;
+}
+
+input{
+    border: 1px solid gray;
+    border-radius: 15px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+{
+
+}
+
+.botao {
+    color: white;
+    background-color: rgb(168, 189, 243);
+    border: 2px solid gray;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
